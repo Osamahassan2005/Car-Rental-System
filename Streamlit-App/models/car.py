@@ -67,7 +67,7 @@ class Car:
         available_cars = cars[cars['available'] == True]
 
         if not available_cars.empty:
-            st.image('image/availablecars.jpg')
+            st.image('Streamlit-App/image/availablecars.jpg')
             st.dataframe(available_cars.reset_index(drop=True))
         else:
             st.info("No cars available in the system!")
