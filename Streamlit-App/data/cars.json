@@ -1,0 +1,26 @@
+[
+    {
+        "car_id":"1",
+        "brand":"toyota",
+        "model":"corolla",
+        "seating_capacity":5,
+        "price_per_day":400,
+        "available":false
+    },
+    {
+        "car_id":"2",
+        "brand":"bmw",
+        "model":"3-series",
+        "seating_capacity":5,
+        "price_per_day":200,
+        "available":true
+    },
+    {
+        "car_id":"3",
+        "brand":"honda",
+        "model":"civic",
+        "seating_capacity":5,
+        "price_per_day":200,
+        "available":true
+    }
+]
