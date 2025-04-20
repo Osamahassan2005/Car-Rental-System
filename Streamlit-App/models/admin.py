@@ -74,7 +74,7 @@ class Admin(Account):
     def display_cars():
         cars = Car.load_cars()
         if not cars.empty:
-            st.image('image/allcars.jpg')
+            st.image('Streamlit-App/image/allcars.jpg')
             st.dataframe(cars)
         else:
             st.info('No cars available!')
