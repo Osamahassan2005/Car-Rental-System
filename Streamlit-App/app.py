@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+import os
 from models.car import Car
 from models.customer import Customer
 from models.admin import Admin  
@@ -112,7 +113,7 @@ def main_menu():
                           , key="main_menu_selectbox",)
     if choice == "Home":
         st.markdown("**Welcome & System Overview**")
-        st.image("https://raw.githubusercontent.com/Osamahassan2005/Car-Rental-System/main/Streamlit-App/image/home.jpg")
+        st.image(os.path.join(os.getcwd(), "Streamlit-App/image/home.jpg"))
         st.subheader("Instructions :")
         st.write("1. Please select an option from the sidebar to continue.")
         st.write('2. You can Create account as an admin or customer.')
