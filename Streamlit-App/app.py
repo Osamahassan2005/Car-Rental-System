@@ -112,7 +112,7 @@ def main_menu():
                           , key="main_menu_selectbox",)
     if choice == "Home":
         st.markdown("**Welcome & System Overview**")
-        st.image("Streamlit-App/image/home.jpg")
+        st.image("https://github.com/Osamahassan2005/Car-Rental-System/blob/main/Streamlit-App/image/home.jpg")
         st.subheader("Instructions :")
         st.write("1. Please select an option from the sidebar to continue.")
         st.write('2. You can Create account as an admin or customer.')
