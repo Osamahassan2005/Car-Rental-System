@@ -112,7 +112,7 @@ def main_menu():
                           , key="main_menu_selectbox",)
     if choice == "Home":
         st.markdown("**Welcome & System Overview**")
-        st.image("image/home.jpg")
+        st.image("Streamlit-App/image/home.jpg")
         st.subheader("Instructions :")
         st.write("1. Please select an option from the sidebar to continue.")
         st.write('2. You can Create account as an admin or customer.')
@@ -189,12 +189,12 @@ def admin_menu(admin):
         )
     st.title('Admin Dashboard')
     if choice == "View Personal Info":
-        st.image('image/userprofile.jpg')
+        st.image('Streamlit-App/image/userprofile.jpg')
         st.subheader("Administrator Profile Summary") 
         st.write(admin)
     elif choice == "Add New Car":
         st.subheader("Vehicle Onboarding System")
-        st.image('image/addcar.jpg')
+        st.image('Streamlit-App/image/addcar.jpg')
         car_id = st.text_input("Car ID")
         brand = st.text_input("Brand").lower()
         model = st.text_input("Model").lower()
@@ -247,7 +247,7 @@ def customer_menu(customer):
     st.subheader('Customer Dashboard')
     if choice == "View Personal Info":
         st.subheader("Account Details")
-        st.image('image/userprofile.jpg')
+        st.image('Streamlit-App/image/userprofile.jpg')
         st.write(customer)
 
     elif choice == "View Available Cars":
@@ -256,7 +256,7 @@ def customer_menu(customer):
 
     elif choice == "Rent Car":
         st.subheader("Vehicle Booking Section")
-        st.image('image/addcar.jpg')
+        st.image('Streamlit-App/image/addcar.jpg')
         rent_car_id = st.text_input("Enter Car ID")
         start_date = st.date_input("Start Date")
         end_date = st.date_input("End Date")
