@@ -9,14 +9,13 @@ from models.admin import Admin
 st.markdown("""
     <style> 
         .stApp {
-            background-size: cover;
-            color: #333;
+            color: #1a1a1a;
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
             text-align: left;
-            padding: 20px;
-            border-radius: 20px;
-            margin: 20px;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 0px;
             background-color: #fff
         } 
             .stApp header { 
