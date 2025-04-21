@@ -301,19 +301,18 @@ def main():
         main_menu()
     
     elif st.session_state.page == 'admin_menu':
-        if 'admin' in st.session_state and st.session_state.admin is not None:
-            admin_menu(st.session_state.admin)
+        admin = st.session_state.get('admin', None)
+        if admin:
+            admin_menu(admin)
         else:
             st.error("Admin not logged in. Please log in first.")
             st.session_state.page = 'main_menu'
     
     elif st.session_state.page == 'customer_menu':
-        if 'customer' in st.session_state and st.session_state.customer is not None:
-            customer_menu(st.session_state.customer)
+        customer = st.session_state.get('customer', None)
+        if customer:
+            customer_menu(customer)
         else:
             st.error("Customer not logged in. Please log in first.")
-            st.session_state.page = 'main_menu'
-
-main()
-
-
+            st.session_state.page = 'main_menu' 
+main() 
