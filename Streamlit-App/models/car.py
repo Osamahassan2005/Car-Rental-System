@@ -4,7 +4,7 @@ import streamlit as st
 from models.account import Account
 class Car:
     '''Car class for managing car rental system. It includes methods to load, save, and add cars.'''
-    cars_file = Account.get_data_path('data\cars.json')
+    cars_file = Account.get_data_path('data/cars.json')
 
     def __init__(self, car_id, brand, model, seating_capacity, price_per_day, available=True):
         self.car_id = car_id
