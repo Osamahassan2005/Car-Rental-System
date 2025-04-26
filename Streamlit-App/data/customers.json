@@ -1,0 +1,11 @@
+[
+    {
+        "role":"customer",
+        "user_name":"customer123",
+        "password":"passw123",
+        "first_name":"muhammad",
+        "last_name":"ali",
+        "address":"xyz",
+        "balance":9800
+    }
+]
