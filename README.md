@@ -1,4 +1,4 @@
-# Car Rental Management System (Semester Project)
+# Car Rental Management System 🚗(Semester Project)
 
 **💡 Project Overview**  
 Developed a robust **Python-based Car Rental System** using OOP principles, featuring:  
@@ -16,7 +16,7 @@ Created a scalable solution for managing vehicle rentals, customer accounts, pay
 - **Composition**: `RentalManager` integrated with `Customer` class  
 - **Operator Overloading**: `Customer.__add__` for balance updates, `Admin.__sub__` for car removal  
 - **Exception Handling**: Custom errors for payments/rentals  
-- **Abstract Classes**: Base `Account` class with template methods  
+  
 
 ✔️ **Key Features:**  
 - Role-based access (Admin/Customer portals)  
