@@ -265,7 +265,7 @@ def customer_menu(customer):
     ],
         key="customer_menu_radio",
     )
-    st.subheader('Customer Dashboard')
+    st.title('Customer Dashboard')
     if choice == "View Personal Info":
         st.subheader("Account Details")
         image_path=get_image_path('userprofile.jpg')
