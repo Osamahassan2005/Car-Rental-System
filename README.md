@@ -1,4 +1,4 @@
-# Car Rental Management System 🚗(Semester Project)
+# Car Rental Management System 🚗(2nd Semester Project)
 
 **💡 Project Overview**  
 Developed a robust **Python-based Car Rental System** using OOP principles, featuring:  
