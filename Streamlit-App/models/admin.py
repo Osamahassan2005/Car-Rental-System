@@ -13,7 +13,7 @@ class Admin(Account):
     def __init__(self, user_name, password, first_name, last_name, role='admin'):
         '''Initializes the Admin object with user_name, password, first_name, last_name, and role.'''
         super().__init__(role, user_name, password, first_name, last_name)
-        self.rental = RentalManager(None)
+        #self.rental = RentalManager(None)
 
     def __str__(self):
         '''Returns a string representation of the Admin object.'''
