@@ -77,7 +77,16 @@ class Customer(Account):
         '''Rents a car for the specified duration. If the car is not available, it shows a warning.'''
         try:
             #initialize the processing payment state
-            st.session_state.processing_payment = True
+            st.session_state.processing_payment = True 
+            rental_history = RentalManager.load_history()
+            active_rentals = rental_history[
+            (rental_history['user_name'] == self.user_name) &
+             (rental_history['status'] == 'active')
+             ]
+
+            if not active_rentals.empty:
+               st.warning("You already have an active rental. Please return the car before renting another one.")
+               return
             cars = Car.load_cars()
             # Check if the car ID is valid
             if car_id not in cars['car_id'].values:
@@ -161,6 +170,7 @@ class Customer(Account):
 
     def deduct_balance(self, user_name, car_id, actual_days, expected_days):
         '''Deducts the extra charges from the customer's balance if the car is returned late.'''
+        
         cars = Car.load_cars()
         car_match = cars[cars['car_id'] == car_id]
         if car_match.empty:
@@ -168,6 +178,9 @@ class Customer(Account):
             return
         car_row = car_match.iloc[0]
         extra_charges = int(car_row['price_per_day'] * (actual_days - expected_days))
+        if self.balance < extra_charges:
+           st.warning(f"You do not have enough balance to pay late fee of Rs {extra_charges}. Please recharge your account.")
+           return   # Or handle it differently
         self.balance -= extra_charges
         self.update_balance(self.balance)
         return extra_charges
