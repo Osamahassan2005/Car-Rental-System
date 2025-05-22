@@ -150,8 +150,9 @@ class Customer(Account):
         extra_charges = 0
         if actual_days > expected_days:
             extra_charges = self.deduct_balance(user_name, car_id, actual_days, expected_days)
-            self.update_status(rental_history, active_rental, extra_charges)
-            self.mark_car_available(car_id)
+            if extra charges !=0:
+               self.update_status(rental_history, active_rental, extra_charges)
+               self.mark_car_available(car_id)
             st.success(f'Late Returned Notice: You were {actual_days - expected_days} days late, RS{extra_charges} Fee Applied.')
         else:
             self.update_status(rental_history, active_rental, extra_charges)
@@ -180,7 +181,7 @@ class Customer(Account):
         extra_charges = int(car_row['price_per_day'] * (actual_days - expected_days))
         if self.balance < extra_charges:
            st.warning(f"You do not have enough balance to pay late fee of Rs {extra_charges}. Please recharge your account.")
-           return   # Or handle it differently
+           return 0   # Or handle it differently
         self.balance -= extra_charges
         self.update_balance(self.balance)
         return extra_charges
