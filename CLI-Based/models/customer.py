@@ -147,6 +147,9 @@ class Customer(Account):
             return
         car_row=car_match.iloc[0]
         extra_charges=int(car_row['price_per_day']*(actual_days-expected_days))
+        if self.balance < extra_charges:
+           st.warning(f"You do not have enough balance to pay late fee of Rs {extra_charges}. Please recharge your account.")
+           return   # Or handle it differently
         self.balance -= extra_charges
         #update balance
         self.update_balance(self.balance)
