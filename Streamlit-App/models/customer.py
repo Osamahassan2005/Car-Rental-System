@@ -105,7 +105,7 @@ class Customer(Account):
             #check if balance is sufficient
             rent_amount = rental_days * car_row['price_per_day']
             if self.balance < rent_amount:
-                st.error(f"Insufficient balance. You need ${rent_amount} but have ${self.balance}.")
+                st.error(f"Insufficient balance.You need {rent_amount} but have ${self.balance}.")
                 return
             # Process payment
             payment=PaymentMethod(rent_amount,self.user_name)
@@ -151,7 +151,7 @@ class Customer(Account):
         if actual_days > expected_days:
             extra_charges = self.deduct_balance(user_name, car_id, actual_days, expected_days)
             if extra_charges == 0:
-                st.warning("Return Failed: You do not have enough balance to pay late fee: {extra_charges}. Please recharge your balance.")
+                st.warning(f"Return Failed: You do not have enough balance to pay late fee: {extra_charges}. Please recharge your balance.")
                 return  # Stop here, don't update status or car availability
 
             self.update_status(rental_history, active_rental, extra_charges)
