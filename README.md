@@ -43,7 +43,7 @@ Created a scalable solution for managing vehicle rentals, customer accounts, pay
 Abdul Hadi Siddiqui — Collaborated with dedication and innovation to bring the project vision to life.
 
 **live Demo:**
-https://car-rental-system-app-project.streamlit.app/
+https://car-rental-system-app.streamlit.app/
 
 
 #Python #OOP #Streamlit #SoftwareDesign #ProgrammingPortfolio #TechInnovation  
